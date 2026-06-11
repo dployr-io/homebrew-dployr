@@ -5,15 +5,15 @@
 class Dployr < Formula
   desc "Ship apps, not infrastructure!"
   homepage "https://github.com/dployr-io/homebrew-dployr"
-  version "0.6.54"
+  version "0.6.55"
   license "Apache License, Version 2.0"
 
   depends_on "caddy"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dployr-io/dployr/releases/download/v0.6.54/dployr-Darwin-x86_64.tar.gz"
-      sha256 "f178e2d03f278890d90c742888ade22c4f0897e016805ede60f8c26905078c16"
+      url "https://github.com/dployr-io/dployr/releases/download/v0.6.55/dployr-Darwin-x86_64.tar.gz"
+      sha256 "ee57c6219e7673935bb9058325bdb8ca402b8adbfe06d0b5fd38a3802bc60772"
 
       define_method(:install) do
         bin.install "dployr"
@@ -21,8 +21,8 @@ class Dployr < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dployr-io/dployr/releases/download/v0.6.54/dployr-Darwin-arm64.tar.gz"
-      sha256 "32cf09576757c8b99d76182101b2c0635f41910082b6984fddfa1658091c092b"
+      url "https://github.com/dployr-io/dployr/releases/download/v0.6.55/dployr-Darwin-arm64.tar.gz"
+      sha256 "fbbc4d1a44b67e192294e2298e26bae86b4d57dee7184844d720a5c405d8dfcb"
 
       define_method(:install) do
         bin.install "dployr"
@@ -33,16 +33,16 @@ class Dployr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dployr-io/dployr/releases/download/v0.6.54/dployr-Linux-x86_64.tar.gz"
-      sha256 "4f2ef695ab6e2838fb34ce0de813bba38441b6e654b97895f078a1fe3b80847d"
+      url "https://github.com/dployr-io/dployr/releases/download/v0.6.55/dployr-Linux-x86_64.tar.gz"
+      sha256 "3cf18945ff2bf345c1ae04dd8869ad03a96b4982aaba9d6ab62ff7630e199901"
       define_method(:install) do
         bin.install "dployr"
         bin.install "dployrd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dployr-io/dployr/releases/download/v0.6.54/dployr-Linux-arm64.tar.gz"
-      sha256 "55c2b7fc47955a826c672a32b5cfddf52db4fdaeb135a125ac0c20c636dc6f46"
+      url "https://github.com/dployr-io/dployr/releases/download/v0.6.55/dployr-Linux-arm64.tar.gz"
+      sha256 "126d3eedec673abf96680099c64ac5da2a0b38699b0d4f297404241dbad310c0"
       define_method(:install) do
         bin.install "dployr"
         bin.install "dployrd"
